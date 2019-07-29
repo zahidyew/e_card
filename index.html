@@ -4,11 +4,34 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+   <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
    <title>eCard</title>
 </head>
 <body>
-   <h1>E-card</h1>
-   <a href="http://maps.google.com/maps?daddr=71,Lorong Kuala Menggatal 11, 88400 Kota Kinabalu, Sabah">open map</a>
-   <!-- <a href="geo:6.0588778,116.152091">open map</a> -->
+   <div class="container">
+      <section id="section1">
+         <h1 id="first-title" class="event-name">Ali </h1>
+         <h1 id="second-title" class="event-name">& Alice</h1>
+         <h2 id="date" class="details">21 Nov 2019</h2>
+         <h2 id="time" class="details">7.30pm - 10.30pm</h2>
+         <h3 id="location" class="details">at Hilton Hotel, KK</h3>
+         <button type="button" id="button"><i class="fas fa-map-marked-alt"></i> Direction</button>
+         <br>
+         <!-- <a href="http://maps.google.com/maps?daddr=71,Lorong Kuala Menggatal 11, 88400 Kota Kinabalu, Sabah">open map</a> -->
+         <!-- <a href="geo:6.0588778,116.152091">open map</a> -->
+      </section>
+   </div>
+
+   <script>
+      var button = document.getElementById("button");
+      button.addEventListener("click", openMap);
+
+      function openMap() {
+         let address = "masjid bandaraya";
+
+         window.location.href = "http://maps.google.com/maps?daddr=" + address;
+      }
+   </script>
 </body>
 </html>
