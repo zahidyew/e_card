@@ -10,11 +10,16 @@ body {
    height: 100vh;
    color: black;
    font-family: 'Dancing Script', cursive;
+   -webkit-user-select: none; /* Safari */        
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* IE10+/Edge */
+   user-select: none; /* Standard */
 }
 
 .container {
    height: 100%;
    width: 100%;
+   overflow: hidden;
 }
 
 section {
@@ -25,10 +30,11 @@ section {
    align-items: center;
    justify-content: center;
    text-align: center;
+   background-color: rgba(255,241,208, 0.6);
 }
 
 #section1 {
-   background-color: rgba(255,241,208, 0.6);
+   /* background-color: rgba(255,241,208, 0.6);
    /* background-image: url('./resources/background.jpg');
    background-repeat: no-repeat;
    background-position: center;
@@ -76,3 +82,7 @@ section {
    box-shadow: 5px 4px 5px #ccc;
 }
 
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
