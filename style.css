@@ -9,7 +9,6 @@
 body {
    height: 100vh;
    color: black;
-   font-family: 'Dancing Script', cursive;
    -webkit-user-select: none; /* Safari */        
    -moz-user-select: none; /* Firefox */
    -ms-user-select: none; /* IE10+/Edge */
@@ -31,17 +30,22 @@ section {
    justify-content: center;
    text-align: center;
    background-color: rgba(255,241,208, 0.6);
+   font-family: 'Raleway', sans-serif;
 }
 
-#section1 {
+/* #section1 {
    /* background-color: rgba(255,241,208, 0.6);
    /* background-image: url('./resources/background.jpg');
    background-repeat: no-repeat;
    background-position: center;
-   background-size: cover; */
+   background-size: cover;
+} */
+
+h1 {
+   font-family: 'Dancing Script', cursive;
 }
 
-.event-name {
+.big-title {
    font-size: 5.5rem;
    text-shadow: 10px 10px 8px #ccc;
 }
@@ -57,7 +61,6 @@ section {
 }
 
 .details {
-   font-family: 'Raleway', sans-serif;
    font-weight: 100;
    font-size: 1.1rem;
 }
@@ -85,4 +88,33 @@ section {
 /* hide disabled button */
 .flickity-prev-next-button:disabled {
   display: none;
+}
+
+#second-page-title {
+   font-size: 3rem;
+   border-bottom: 1px solid #ccc;
+   margin-bottom: 20px;
+   margin-top: -130px;
+}
+
+.flex-parent {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.flex-child {
+   display: inline-block;
+   width: calc(100% * (1/2) - 5px);
+   font-size: 1rem;
+   margin-bottom: 5px;
+}
+
+@media screen and (max-width: 376px) {
+   #second-page-title {
+      font-size: 2.5rem;
+   }
+
+   .flex-child {
+      font-size: 0.8rem;
+   }
 }
